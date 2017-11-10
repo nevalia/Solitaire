@@ -21,4 +21,23 @@ public class Pile
 		this.symbole = symbole;
 	}
 
+	public ArrayList<Carte> getCartes() {
+		return cartes;
+	}
+
+	public void setCartes(ArrayList<Carte> cartes) {
+		this.cartes = cartes;
+	}
+	
+	//Cette fonction affiche les cartes d'une pile
+		public String afficherCartes() 
+		{
+			String cartes = "";
+			for (int i = 0; i < this.cartes.size(); i++)
+			{
+				cartes += this.cartes.get(i).toString() + "\n";
+			}
+			return cartes;
+		}
+
 }
