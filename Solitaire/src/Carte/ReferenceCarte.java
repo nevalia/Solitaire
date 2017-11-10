@@ -1,5 +1,7 @@
 package Carte;
 
-public class ReferenceCarte {
+
+public class ReferenceCarte 
+{
 	
 }

@@ -37,6 +37,39 @@ public class Carte
 		return couleur;
 	}
 
+	public void setCouleur() {
+		switch (this.symbole) {
+			case "pique":
+				this.couleur = "noire";
+				break;
+			case "trefle":
+				this.couleur = "noire";
+				break;
+			case "coeur":
+				this.couleur = "rouge";
+				break;
+			case "carreau":
+				this.couleur = "rouge";
+				break;
+			default:
+				break;
+			}
+	}
+
+	public boolean isVisible() {
+		return visible;
+	}
+
+	public void setVisible(boolean visible) {
+		this.visible = visible;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Carte [symbole=" + symbole + ", valeur=" + valeur + ", couleur=" + couleur + ", visible=" + visible
+				+ "]";
+	}
 	
 	
 }
