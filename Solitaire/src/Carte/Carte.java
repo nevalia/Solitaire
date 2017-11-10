@@ -3,7 +3,7 @@ package Carte;
 
 public class Carte 
 {
-	private String symbole;
+	private String symbole ;  
 	private String valeur;
 	public String couleur;
 	private boolean visible; 
