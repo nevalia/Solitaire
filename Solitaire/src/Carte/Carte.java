@@ -11,6 +11,9 @@ public class Carte
 	
 	
 	
+	
+	
+	
 	public Carte(String symbole, String valeur, boolean visible) {
 		this.symbole = symbole;
 		this.valeur = valeur;
