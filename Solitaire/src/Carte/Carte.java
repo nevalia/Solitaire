@@ -9,7 +9,6 @@ public class Carte
 	private boolean visible; 
 	
 	
-	
 	public Carte(String symbole, String valeur, boolean visible) {
 		this.symbole = symbole;
 		this.valeur = valeur;
