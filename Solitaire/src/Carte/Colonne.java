@@ -42,4 +42,48 @@ public class Colonne
 	{
 		this.listeCartes = listeCartes;
 	}
-}
+
+		public String afficherColonne() 
+		{
+			String colonne = "";
+			for (int i = 0; i < this.nbCartes; i++)
+			{
+				colonne += this.listeCartes.get(i).toString() + "\n";
+			}
+			return colonne;
+		}
+		
+		
+		public ArrayList<Carte> getCartesVisible()
+		{
+			ArrayList<Carte> cartes = new ArrayList<Carte>();
+			
+			for(int i = 0; i < this.listeCartes.size(); i++)
+			{
+				if(this.listeCartes.get(i).isVisible())
+				{
+					cartes.add(this.listeCartes.get(i));
+				}
+			}
+			
+			return cartes;
+		}
+		
+		
+			public ArrayList<Carte> getCartesCachees()
+			{
+				ArrayList<Carte> cartes = new ArrayList<Carte>();
+				
+				for(int i = 0; i < this.listeCartes.size(); i++)
+				{
+					
+					if(! this.listeCartes.get(i).isVisible())
+					{
+						cartes.add(this.listeCartes.get(i));
+					}
+				}
+				
+				return cartes;
+			}
+		
+	}
