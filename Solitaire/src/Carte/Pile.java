@@ -29,7 +29,7 @@ public class Pile
 		this.cartes = cartes;
 	}
 	
-
+	//Cette fonction affiche les cartes d'une pile
 		public String afficherCartes() 
 		{
 			String cartes = "";

@@ -3,13 +3,14 @@ package Carte;
 
 public class Carte 
 {
-	private String symbole ;  
-	private String valeur;
+	private String symbole;
+	private int valeur;
 	public String couleur;
-	private boolean visible; 
+	private boolean visible; // pour savoir si la carte est visible ou non dans une colonne 
 	
-
-	public Carte(String symbole, String valeur, boolean visible) {
+	//constructeur  n
+	//On ne passe pas la couleur en param�tre parce qu'on peut la deviner � partir du symbole
+	public Carte(String symbole, int valeur, boolean visible) {
 		this.symbole = symbole;
 		this.valeur = valeur;
 		this.visible = visible;
@@ -25,11 +26,11 @@ public class Carte
 		this.symbole = symbole;
 	}
 
-	public String getValeur() {
+	public int getValeur() {
 		return valeur;
 	}
 
-	public void setValeur(String valeur) {
+	public void setValeur(int valeur) {
 		this.valeur = valeur;
 	}
 
@@ -60,15 +61,18 @@ public class Carte
 		return visible;
 	}
 
-	public void setVisible(boolean visible) {
-		this.visible = visible;
+	public void setVisible() {
+		this.visible = true;
 	}
 
-	
+	//g�n�r� par eclipse
 	@Override
 	public String toString() {
+		if(visible)
 		return "Carte [symbole=" + symbole + ", valeur=" + valeur + ", couleur=" + couleur + ", visible=" + visible
 				+ "]";
+		else
+			return "Carte Cachée";
 	}
 	
 	
